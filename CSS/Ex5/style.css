@@ -1,0 +1,19 @@
+h1{
+    color: darkgreen;
+}
+h2{
+    font-style: italic;
+}
+a{
+   color: red;
+   text-decoration: none;
+}
+a:visited{
+    color:seagreen;
+}
+a:hover{
+    color:mediumblue;
+}
+hr{
+    font-size: 10px;
+}

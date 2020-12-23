@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+	  <meta charset='utf-8'>
+	  <link rel="icon" type="image/png" href="../images/pumpkin_logo.jpg" />
+	  <title>Exercice CSS 4</title>
+	  <style>
+		  .Centrage{
+			  text-align: center;
+		  }
+		  .legend_name{
+			  background-color: #2574A9;
+		  }
+		  .legend_coord{
+			  background-color: #9A12B3;
+		  }
+		  .legend_reglement{
+			  background-color:#DB0A5B;
+		  }
+		  input.text, textarea{
+			  width:250px;
+			  margin:0;
+			  float:right;
+		  }
+		  ul{
+			  list-style-type: none;
+		  }
+		   legend_name ol li input text{
+			text-align: right;
+		  }
+		  #jachete{
+			text-align: right;
+		  }
+		  
+	  </style>
+	</head>
+	<body>
+		<form action="index.php" method="post" id="monfomrulaire">
+			<fieldset class="legend_name">
+				<legend class="legend_name">Votre identité</legend>
+				<ol>
+				<li><label for="nom" class="Centrage">Nom :</label><input type="text" name="nom" placeholder="Nom" id="nom"  class="Centrage" required/></li>
+				<li><label for="Prenom" class="Centrage">Prénom :<input type="text" name="Prenom" class="Centrage" placeholder="Prénom"/></label></li>
+				<li><label for="AdMail" class="Centrage">mail :</label><input type="email" name="AdMail" placeholder="Adresse mail" class="Centrage" pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/"/></li>
+				</ol>
+			</fieldset>
+			<fieldset class="legend_coord">
+				<legend class="legend_coord">Adresse de livraison</legend>
+				<ol>
+				<li>Adresse :<textarea id="monAdresse" name="MonAdresse" rows="5" cols="20"></textarea></li>
+				<li>Code postal :<input type="text" name="codepostal" placeholder="Code postal" maxlength="5" pattern="[0-9]{5}"></li>
+				<li>Ville :<input type="text" name="ville" placeholder="Ville"></li>
+				</ol>
+			</fieldset>
+			<fieldset class="legend_reglement">
+				<legend class="legend_reglement">Informations de règlement</legend>
+				<ol>
+				<li>Type de carte bancaire :</li>
+					<ul>
+						<li><input type="Radio" name="Carte" id="VISA">VISA</li>
+						<li><input type="Radio" name="Carte" id="Mastercard">Mastercard</li>
+					</ul>
+				<li><label for="NumCarte">Numéro de carte :</label><input type="text" name="NumCarte" placeholder="Numéro de carte" pattern="[0-9]{16}" maxlength="16"></li>
+				<li><label for="CodeSecu">Code de sécurité :</label><input type="text" name="CodeSecu" placeholder="Code de sécurité" maxlength="3"></li>
+				<li><label for="Titulaire">Nom du Titulaire :</label><input type="text" name="Titulaire" placeholder="Nom du titulaire"></li>
+				</ol>
+			</fieldset>
+			<input type="submit" value="J'achète!" id="jachete">
+		</form>
+	</body>
+</html>
